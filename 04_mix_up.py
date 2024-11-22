@@ -12,9 +12,15 @@ Exemplo:
 Assuma que a e b tem tamanho 2 ou maior.
 """
 
+
 def mix_up(a, b):
-    # +++ SUA SOLUÇÃO +++
-    return
+    doisModA = a[2:]
+    doisModB = b[2:]
+    lista = [doisModA, doisModB]
+    stringReturn = [b[0:2] + lista[0], a[0:2] + lista[1]]
+
+    string = ' '.join(stringReturn)
+    return string
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
