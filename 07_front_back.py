@@ -10,10 +10,17 @@ Exemplo: 'abcde', a metade da frente é 'abc' e a de trás é 'de'.
 Finalmente, dadas duas strings a e b, retorne uma string na forma:
 a-frente + b-frente + a-trás + b-trás
 """
-def front_back(a, b):
-    # +++ SUA SOLUÇÃO +++
-    return
+import math
 
+def front_back(a, b):
+    
+    def split_string(s):
+        position = math.ceil(len(s) / 2)
+        front = s[:position]
+        back = s[position:]
+
+        return front, back
+    return ''.join([split_string(a)[0], split_string(b)[0], split_string(a)[1], split_string(b)[1]])
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
 
