@@ -8,9 +8,15 @@ Exemplo: [1, 2, 2, 3]
 Irá retornar: [1, 2, 3]
 """
 
+
 def remove_adjacent(nums):
-    # +++ SUA SOLUÇÃO +++
-    return
+    refatorado = []
+    for n in nums:
+        if n in refatorado:
+            if n == refatorado[-1]:
+                continue
+        refatorado.append(n)
+    return refatorado
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
